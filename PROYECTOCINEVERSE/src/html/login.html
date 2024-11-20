@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEVERSE - Iniciar Sesión</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="body">
+    <div class="background"></div>
+    <div class="stars"></div>
+    <div class="login-container">
+        <div class="login-header">
+            <h1 class="login-title" id="cineverse-title">CINEVERSE</h1>
+            <img src="../img/LogoCFN.png" alt="Cineverse Logo" class="login-logo">
+        </div>
+        <form class="login-form" id="loginForm">
+            <div class="form-group">
+                <input type="email" class="form-input" id="email" name="email" placeholder=" " required>
+                <label for="email" class="form-label">Email</label>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-input" id="password" name="password" placeholder=" " required
+                    min="8">
+                <label for="password" class="form-label">Contraseña</label>
+            </div>
+            <div id="error-message" class="error-message"></div>
+            <button type="submit" class="login-button">Iniciar Sesión</button>
+        </form>
+        <p class="register-link">¿No estás registrado? <a href="register.html">Regístrate</a></p>
+    </div>
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>

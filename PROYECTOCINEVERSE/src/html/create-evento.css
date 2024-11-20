@@ -1,0 +1,281 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+}
+
+/* Navigation bar styles */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1a1a1a;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo {
+    height: 55px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-icon {
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s ease;
+}
+
+.nav-icon:hover {
+    transform: scale(1.2) rotate(5deg);
+    filter: drop-shadow(0 0 5px rgba(229, 9, 20, 0.7));
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-bar:focus-within {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    width: 200px;
+    transition: width 0.3s ease;
+}
+
+.search-input:focus {
+    width: 250px;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.search-bar:hover .search-icon {
+    transform: scale(1.1);
+}
+
+/* Create event page styles */
+.create-event-page {
+    background-color: #0a0a0a;
+    min-height: 100vh;
+}
+
+.create-event-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(229, 9, 20, 0.1);
+}
+
+.create-event-title {
+    color: #e50914;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Base styles for all inputs */
+.form-input,
+.form-textarea,
+input[type="text"],
+input[type="datetime-local"],
+textarea {
+    width: 100%;
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Specific styles for textarea */
+.form-textarea,
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Focus states */
+.form-input:focus,
+.form-textarea:focus,
+input[type="text"]:focus,
+input[type="datetime-local"]:focus,
+textarea:focus {
+    border-color: #e50914;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.2);
+}
+
+/* DateTime input specific styles */
+input[type="datetime-local"] {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #2a2a2a;
+    width: 100%;
+    max-width: 100%;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 0.7;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* File input styling */
+input[type="file"] {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #2a2a2a;
+    border: 2px dashed #3a3a3a;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #e50914;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #f40612;
+}
+
+input[type="file"]:hover {
+    border-color: #e50914;
+}
+
+/* Submit button styles */
+.submit-button {
+    background-color: #e50914;
+    color: #ffffff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+.submit-button:hover {
+    background-color: #f40612;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(229, 9, 20, 0.3);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+/* Placeholder styling */
+input::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-bar {
+        padding: 1rem;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .create-event-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .create-event-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-input,
+    .form-textarea,
+    input[type="text"],
+    input[type="datetime-local"],
+    input[type="file"],
+    textarea {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .submit-button {
+        padding: 0.8rem 1.5rem;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEVERSE - Registro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="body">
+    <div class="background"></div>
+    <div class="stars"></div>
+    <div class="register-container">
+        <div class="register-header">
+            <h1 class="register-title" id="cineverse-title">CINEVERSE</h1>
+            <img src="../img/LogoCFN.png" alt="Cineverse Logo" class="register-logo">
+        </div>
+        <form class="register-form" id="registerForm">
+            <div class="form-group">
+                <input type="text" class="form-input" id="name" name="Nombre" placeholder=" " required>
+                <label for="name" class="form-label">Nombre</label>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-input" id="email" name="Email" placeholder=" " required>
+                <label for="email" class="form-label">Email</label>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-input" id="password" name="Contrasenia" placeholder=" " required min="8">
+                <label for="password" class="form-label">Contraseña</label>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-input" id="repeat-password" placeholder=" " required min="8">
+                <label for="repeat-password" class="form-label">Repetir contraseña</label>
+            </div>
+            <div class="form-group">
+                <input type="date" class="form-input" id="birthdate" name="Fecha_nacimiento" placeholder=" " required min="8">
+                <label for="birthdate" class="form-label">Fecha de nacimiento</label>
+            </div>
+            <div id="error-message" class="error-message"></div>
+            <button type="submit" class="register-button">Registrarse</button>
+        </form>
+        <p class="login-link">¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a></p>
+    </div>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

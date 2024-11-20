@@ -1,0 +1,15 @@
+global:
+  scrape_interval: 15s # Intervalo global para scrapeo
+  evaluation_interval: 15s # Intervalo para evaluar reglas
+
+scrape_configs:
+  - job_name: "prometheus" # Nombre del trabajo
+    static_configs:
+      - targets: 
+          - "localhost:9090" # Prometheus monitoreándose a sí mismo
+
+  - job_name: "mysql"
+    static_configs:
+      - targets: 
+          - "database_master:9104" # Exportador MySQL
+          - "database_slave:9104"  # Exportador MySQL

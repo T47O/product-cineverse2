@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Cineverse</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Gestión de Publicaciones</h2>
+        <form id="managePostForm">
+            <label for="postId">ID de Publicación:</label>
+            <input type="text" id="postId" name="postId" placeholder="Introduce el ID de la publicación">
+            <button type="button" onclick="listPost()">Listar Publicación</button>
+            <button type="button" onclick="deletePost()">Eliminar Publicación</button>
+        </form>
+
+        <h2>Gestión de Usuarios</h2>
+        <form id="manageUserForm">
+            <label for="userId">ID de Usuario:</label>
+            <input type="text" id="userId" name="userId" placeholder="Introduce el ID del usuario">
+            <button type="button" onclick="listUser()">Listar Usuario</button>
+            <button type="button" onclick="deleteUser()">Eliminar Usuario</button>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
